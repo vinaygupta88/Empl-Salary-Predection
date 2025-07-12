@@ -1,45 +1,45 @@
 /* General Styling */
 body {
-  background: linear-gradient(to right, rgba(255,255,255,0.65), rgba(245,245,245,0.65)), 
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
               url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') no-repeat center center fixed;
   background-size: cover;
-  color: #333;
+  color: #fff;
   font-family: 'Segoe UI', sans-serif;
 }
-
 h1, h2, h3, p {
   font-family: 'Poppins', sans-serif;
-  color: #212121;
 }
 
 .jumbotron {
   padding: 30px;
   border-radius: 15px;
   margin-top: 40px;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #333;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
+
+.navbar-inverse {
+  background-color: #222;
+  border-color: #080808;
+}
 /* Navbar Styles */
 .navbar {
-  background-color: #a38888;
-  border-radius: 0;
-  border-bottom: 1px solid #e0e0e0;
+    background-color: #a7cdd2;
+    border-radius: 0;
 }
 
 .navbar-brand {
-  color: #333 !important;
-  font-size: 24px;
-  font-weight: bold;
+    color: #fff !important;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .navbar-nav {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .navbar-nav li {
-  padding-right: 15px;
+    padding-right: 20px;
 }
 
 .navbar-nav a {
@@ -61,89 +61,106 @@ h1, h2, h3, p {
   outline: none !important;
 }
 
-
-.logo {
-  margin-left: 50px;
+.logo{
+	
+	margin-left:50px;
 }
 
 /* Footer */
 footer {
-  background-color: #6e7780;
-  color: #6c757d;
-  text-align: center;
-  padding: 15px;
-  width: 100%;
+    background-color: #757d85;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
 }
 
+/* Footer fixed at the bottom when content is less */
 footer.fixed {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
+
 
 .container {
-  margin-top: 80px;
-  margin-bottom: 50px;
+  margin-top: 70px;
+  margin-bottom:50px;
 }
 
-.form-container {
-  background: linear-gradient(to right, #ffffff, #f0f4f8);
-  padding: 40px;
-  border-radius: 15px;
-  margin-top: 40px;
-  color: #333;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
+  .form-container {
+      background: linear-gradient(to right, #7ea4c9, #57aee8,#75aea0);
+      padding: 40px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
 
-.form-group label {
-  font-weight: 600;
-  font-size: 15px;
-  margin-top: 8px;
-}
+    .form-group label {
+      font-weight: 600;
+      font-size: 15px;
+      margin-top: 8px;
+    }
 
-.form-group {
-  margin-bottom: 20px;
-}
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-@media (max-width: 768px) {
-  .form-group .col-sm-4,
-  .form-group .col-sm-8 {
-    width: 100%;
-    text-align: left;
-  }
-}
+    @media (max-width: 768px) {
+      .form-group .col-sm-4,
+      .form-group .col-sm-8 {
+        width: 100%;
+        text-align: left;
+      }
+    }
 
+    .btn-custom {
+      background-color: #00cc99;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn-custom:hover {
+      background-color: #00b386;
+    }
 .btn-custom {
-  background-color: #1a73e8;
+  background-color: #00cc99;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
   color: white;
   font-weight: bold;
 }
-
 .btn-custom:hover {
-  background-color: #1669c1;
+  background-color: #00b386;
 }
+
+
+
+
+
 
 /* ---------------------------------------------------------------------------------*/
 /* Responsive Navbar Toggle Slide-in Effect */
 @media (max-width: 768px) {
   .navbar-collapse {
     position: fixed;
-    top: 0px;
+    top: 80px;
     right: -250px;
-    height: auto;
-    background-color: #ffffff;
-    border-radius: 10px 0px 0px 10px;
+	  height:auto;
+    background-color: #92b9bd;
+	  border-radius:10px 0px 0px 10px;
     width: 150px;
     padding-top: 20px;
     transition: right 0.3s ease-in-out;
     z-index: 999;
   }
-
-  .navbar {
-    height: 80px;
+  .navbar{
+	  height:80px;
   }
 
   .navbar-collapse.in {
@@ -158,7 +175,7 @@ footer.fixed {
   }
 
   .navbar-toggle .icon-bar {
-    background-color: #333;
+    background-color: #fff;
   }
 
   .navbar-nav {
@@ -174,24 +191,29 @@ footer.fixed {
 
   .navbar-nav a {
     font-size: 18px;
-    color: #333 !important;
+    color: #fff !important;
   }
 
   .navbar-nav a:hover {
-    color: #1a73e8 !important;
+    color: #f1c40f !important;
   }
 }
 
+
+
+/* Ensure brand and toggle are on same row and wrapped properly */
 .navbar-header {
   align-items: center;
   width: 100%;
 }
-
+	
+/* Toggle button to float right */
 .navbar-toggle {
   margin-right: 15px;
-  border: 2px solid #333;
+  border: 2px solid #fff;
 }
 
+/* Prevent collapse menu from breaking */
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 18px;
@@ -207,3 +229,4 @@ footer.fixed {
     padding: 10px 12px;
   }
 }
+/* ------------------------------ */
