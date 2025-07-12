@@ -1,0 +1,209 @@
+/* General Styling */
+body {
+  background: linear-gradient(to right, rgba(255,255,255,0.65), rgba(245,245,245,0.65)), 
+              url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3, p {
+  font-family: 'Poppins', sans-serif;
+  color: #212121;
+}
+
+.jumbotron {
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #a38888;
+  border-radius: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+  color: #333 !important;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav li {
+  padding-right: 15px;
+}
+
+.navbar-nav a {
+  color: #333 !important;
+  font-size: 16px;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus,
+.navbar-nav a:active {
+  color: #1a73e8 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+.logo {
+  margin-left: 50px;
+}
+
+/* Footer */
+footer {
+  background-color: #6e7780;
+  color: #6c757d;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+footer.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.form-container {
+  background: linear-gradient(to right, #ffffff, #f0f4f8);
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 40px;
+  color: #333;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-group .col-sm-4,
+  .form-group .col-sm-8 {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.btn-custom {
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-custom:hover {
+  background-color: #1669c1;
+}
+
+/* ---------------------------------------------------------------------------------*/
+/* Responsive Navbar Toggle Slide-in Effect */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0px;
+    right: -250px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 10px 0px 0px 10px;
+    width: 150px;
+    padding-top: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar-collapse.in {
+    right: 0;
+  }
+
+  .navbar-toggle {
+    float: left;
+    margin-left: 15px;
+    border: none;
+    background: transparent;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #333;
+  }
+
+  .navbar-nav {
+    float: none !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-nav li {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .navbar-nav a {
+    font-size: 18px;
+    color: #333 !important;
+  }
+
+  .navbar-nav a:hover {
+    color: #1a73e8 !important;
+  }
+}
+
+.navbar-header {
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-toggle {
+  margin-right: 15px;
+  border: 2px solid #333;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 18px;
+    max-width: 60%;
+  }
+
+  .navbar-toggle {
+    float: right;
+  }
+
+  .navbar-nav > li > a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
