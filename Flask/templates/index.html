@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="icon" href="{{url_for('static',filename='image/icon.png')}}"  type="image/x-icon">
+  <meta name="author" content="Vinay">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  {% include 'navbar.html' %}
+  
+  <div class="container text-center mt-5">
+  <h1 class="display-4 text-warning">Welcome to the Employee Salary Predictor</h1>
+  <p class="lead">Predict Employee Salary using machine learning!</p>
+  <p><em>Designed & Developed by <strong>Vinay Gupta</strong></em></p>
+
+  <hr style="border-top: 2px solid #fff; width: 60%; margin: 30px auto;">
+
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="text-info">📊 Accurate Salary Estimates</h3>
+      <p>Get reliable salary predictions based on key employee attributes and market data.</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-success">⚙️ User-Friendly Interface</h3>
+      <p>Simply enter basic employee details to receive instant and clear salary forecasts.</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-danger">🚀 Optimize Compensation</h3>
+      <p>Make informed salary decisions to attract and retain top talent efficiently.</p>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="jumbotron" style="background-color: rgba(0,0,0,0.5); color: white;">
+    <h2>Why Use This Tool?</h2>
+    <ul class="list-unstyled">
+      <li>✅ Real-time salary predictions powered by a trained ML model</li>
+      <li>✅ Simple and intuitive UI for quick results</li>
+      <li>✅ Data-driven insights for better compensation planning</li>
+    </ul>
+    <a href="{{ url_for('predict_form') }}" class="btn btn-primary btn-lg mt-3">Start Predicting</a>
+  </div>
+</div>
+
+  {% include 'footer.html' %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
