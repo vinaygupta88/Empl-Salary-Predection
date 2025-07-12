@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="icon" href="{{url_for('static',filename='image/icon.png')}}" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="author" content="Vinay">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% include 'navbar.html' %}
+  <div class="container text-center mt-5">
+  <h2 class="text-warning">About This Project</h2>
+  <p class="lead">
+    Accurate salary estimation is vital for businesses to remain competitive and fair. Our system analyzes key employee attributes to predict employee salary, helping organizations make informed compensation decisions.
+  </p>
+
+  <hr style="border-top: 2px solid #fff; width: 60%; margin: 30px auto;">
+
+  <div class="row text-left" style="color: #f1f1f1;">
+    <div class="col-md-6">
+      <h3 class="text-info">🎯 Project Objective</h3>
+      <p>
+        The main goal of this project is to help businesses understand salary trends using machine learning. By assessing factors such as experience, education, role, and market data, the system predicts a fair and competitive salary for employees.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <h3 class="text-success">📈 Why It Matters</h3>
+      <p>
+        Making well-informed salary decisions helps attract and retain top talent while maintaining budget control. With this tool, organizations can ensure equitable compensation and stay aligned with market standards.
+      </p>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="row text-left" style="color: #f1f1f1;">
+    <div class="col-md-4">
+      <h4 class="text-danger">🔍 Features</h4>
+      <ul>
+        <li>ML-powered salary prediction engine</li>
+        <li>Simple and clean UI</li>
+        <li>Instant salary estimates with clear outcomes</li>
+        <li>Responsive design for all devices</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h4 class="text-primary">🏢 Use Cases</h4>
+      <ul>
+        <li>HR Compensation Planning</li>
+        <li>Salary Benchmarking</li>
+        <li>Recruitment Budgeting</li>
+        <li>Employee Retention Strategy</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h4 class="text-warning">🛠️ Technologies Used</h4>
+      <ul>
+        <li>Python & Flask Framework</li>
+        <li>Machine Learning (Scikit-learn)</li>
+        <li>HTML, CSS, Bootstrap</li>
+        <li>Jinja2 Template Engine</li>
+      </ul>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="alert alert-info mt-4">
+    <strong>Want to see the system in action?</strong> Try predicting employee salary now by going to the <a href="{{ url_for('predict_form') }}" class="btn btn-sm btn-primary">Prediction Page</a>!
+  </div>
+</div>
+
+  {% include 'footer.html' %}
+  
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
