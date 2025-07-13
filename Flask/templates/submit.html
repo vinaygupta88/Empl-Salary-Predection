@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result</title>
+  <link rel="icon" href="{{url_for('static',filename='image/icon.png')}}" style="border-radius: 50;" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta name="author" content="Vinay">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  {% include 'navbar.html' %}
+  <div class="container text-center mt-5">
+  <h1 class="mb-4 text-warning">Prediction Result</h1>
+  <h3>
+    Based on the given input, the <strong>Employee salary</strong> is: <span style="color: darkseagreen;font-size: larger; font-weight: bold;">&#8377;</span>
+    <span style="color: #00ff99;font-weight: bold;font-size: 25px;">{{ prediction }} /-</span>
+  </h3>
+
+  <hr style="border-top: 5px solid #fff; margin: 30px auto; width: 60%;">
+
+  <p style="font-size: 18px;">
+    This prediction is generated using a machine learning model trained on real employee salary data.<br>
+    The result provides an estimated salary based on several parameters like experience, role, education, and other relevant factors.
+  </p>
+
+  <p style="font-size: 18px;">
+    Use this information to make informed compensation decisions, plan budgets, and ensure competitive salary offerings.
+  </p><br><br>
+ 
+  <a href="{{ url_for('predict_form') }}" class="btn btn-warning  mt-3">Predict Another</a>
+  <a href="/" class="btn btn-info mt-3">Back to Home</a>
+  <a href="https://vinaygupta88.github.io/Myportfolio/" class="btn btn-success mt-3">Back to Portfolio</a>
+  <hr style="border-top: 5px solid #fff; margin: 30px auto; width: 60%;">
+</div>
+
+  {% include 'footer.html' %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
